@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
 
 gem 'rails', '~> 5.1.5'
 gem 'sqlite3'
