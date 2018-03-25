@@ -11,6 +11,11 @@
 		<%= link_to "Posts", posts_path %>
 	</li>
 
+	<li class="<%= active?(new_post_path)%>">
+		<%# We give it a very specific id %>
+		<%= link_to "New", new_post_path, id: "new_post_from_nav" %>
+	</li>
+
 
 	<li class="<%= active?(edit_user_registration_path)%>">
 		<%= link_to "Account", edit_user_registration_path %>
