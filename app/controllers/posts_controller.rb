@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 	before_action :set_post, only: [:show]
 
 	def index
+		@posts = Post.all
 	end
 
 	# The view for making a new post.
