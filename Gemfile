@@ -8,7 +8,6 @@ end
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
-
 gem 'rails', '~> 5.1.5'
 gem 'sqlite3'
 gem 'puma', '~> 3.7'
@@ -25,6 +24,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
 	gem 'database_cleaner'
   gem 'selenium-webdriver'
+	gem 'factory_bot_rails'
 end
 
 group :development do
