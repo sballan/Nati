@@ -11,4 +11,8 @@
 	<td>
 		<%= truncate(post.text) %>
 	</td>
+	<td>
+		<%# Change the id of this element to include the `post.id` %>
+		<%= link_to 'Edit', edit_post_path(post), id: "edit_#{post.id}" %>
+	</td>
 </tr>

@@ -1,0 +1,5 @@
+<%= form_for @post do |f| %>
+	<%= f.date_field :created_at %>
+	<%= f.text_area :text%>
+	<%= f.submit 'Save' %>
+<% end %>

@@ -60,4 +60,29 @@ describe 'navigate' do
 			expect(User.last.posts.last.text).to eq("User_Association")
 		end
 	end
+
+	describe 'edit' do
+		before do
+			@post = FactoryBot.create(:post)
+		end
+
+		it 'can be reached by clicking `edit` on index page' do
+			visit posts_path
+			# Find the link to click on by passing the element id we're looking for.  In _post.html.erb we set the id of the link we want to click on to include the id of our post, we use that here.
+			click_link "edit_#{@post.id}"
+			expect(page.status_code).to eq(200)
+		end
+
+		it 'can be edited' do
+			visit edit_post_path(@post)
+
+			# Look for a form, and fill it in with this content
+			fill_in 'post[created_at]', with: Date.today
+			fill_in 'post[text]', with: "Edited this text"
+			click_on "Save"
+
+			expect(page).to have_content("Edited this text")
+		end
+	end
+
 end
