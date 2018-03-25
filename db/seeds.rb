@@ -1,5 +1,5 @@
 @user = User.create(
-	email: 'test@test.com', 
+	email: 'asdf@asdf.com', 
 	password: 'asdfasdf', 
 	password_confirmation: 'asdfasdf', 
 	first_name: 'James',

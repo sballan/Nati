@@ -13,8 +13,7 @@ class PostsController < ApplicationController
 
 	# Actually make the post 
 	def create
-		# When the form is submitted, we get it's id in params.
-		@post = Post.new(params.require(:post).permit(:created_at, :text))
+		@post = Post.new(post_params)
 		@post.user_id = current_user.id # current_user is given to us from devise
 		if @post.save
 			# Redirect to the show page for Post.  And pass along this cool (useless...) notice
