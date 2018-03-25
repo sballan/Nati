@@ -15,4 +15,8 @@
 		<%# Change the id of this element to include the `post.id` %>
 		<%= link_to 'Edit', edit_post_path(post), id: "edit_#{post.id}" %>
 	</td>
+	<td>
+		<%# Change the id of this element to include the `post.id`. We know to use method: :delete by looking at the routes (you'd think the post_path needed to be destroy_post) %>
+		<%= link_to 'Delete', post_path(post), id: "delete_post_#{post.id}_from_index", method: :delete %>
+	</td>
 </tr>
