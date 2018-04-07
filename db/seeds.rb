@@ -8,7 +8,7 @@
 
 puts "1 User created"
 
-100.times do |post|
+10.times do |post|
 	Post.create!(created_at: Date.today, text: "#{post} text content", user_id: @user.id)
 end
 

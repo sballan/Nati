@@ -1,0 +1,24 @@
+<h1>Users</h1>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				#
+			</th>
+			<th>
+				First Name
+			</th>
+			<th>
+				Last Name
+			</th>
+			<th>
+				Email
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+	<%# This magic works with the _posts.html.erb file.  Crazy. %>
+		<%= render @users %>
+	</tbody>
+</table>
